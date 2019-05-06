@@ -30,8 +30,8 @@
           <div id="vue">
             <img
               src="../assets/vue-logo.png"
-              width="200"
-              height="200"
+              width="162"
+              height="162"
               alt="Vue.js Logo"
             />
             <p>Vue.js</p>
@@ -39,8 +39,8 @@
           <div id="firebase">
             <img
               src="../assets/firebase-logo.png"
-              width="200"
-              height="200"
+              width="162"
+              height="162"
               alt="Firebase Logo"
             />
             <p>Firebase</p>

@@ -25,13 +25,9 @@ nav {
   a {
     text-decoration: none;
     color: navy;
-    font-size: 24px;
-    padding: 16px;
-    margin: 12px;
-  }
-
-  #slack-link {
-    font-size: 20px;
+    font-size: 18px;
+    padding: 8px;
+    margin: 6px;
   }
 }
 </style>

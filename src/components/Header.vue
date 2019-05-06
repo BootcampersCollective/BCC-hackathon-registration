@@ -1,6 +1,6 @@
 <template>
   <header>
-    <logo :width="100" :height="100" />
+    <logo :width="88" :height="88" />
     <navigation />
   </header>
 </template>
