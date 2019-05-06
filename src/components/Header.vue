@@ -20,7 +20,7 @@ export default {
 <style lang="scss" scoped>
 header {
   height: auto;
-  box-shadow: 0 2px 4px;
+  box-shadow: 0 1px 4px #333;
   padding: 14px;
   display: flex;
   flex-direction: row;
