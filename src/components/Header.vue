@@ -1,6 +1,6 @@
 <template>
   <header>
-    <logo :width="200" :height="200" />
+    <logo :width="100" :height="100" />
     <navigation />
   </header>
 </template>
@@ -17,4 +17,14 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+header {
+  height: auto;
+  box-shadow: 0 2px 4px;
+  padding: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+</style>
