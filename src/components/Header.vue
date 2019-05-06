@@ -27,4 +27,11 @@ header {
   justify-content: space-around;
   align-items: center;
 }
+
+@media (max-width: 500px) {
+  header {
+    display: block;
+    text-align: center;
+  }
+}
 </style>

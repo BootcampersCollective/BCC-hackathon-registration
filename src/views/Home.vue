@@ -26,10 +26,26 @@
     <section id="project-technologies">
       <div>
         <h1>What technologies are we using for the project?</h1>
-        <ul>
-          <li>Vue</li>
-          <li>Firebase</li>
-        </ul>
+        <div id="technology-logos">
+          <div id="vue">
+            <img
+              src="../assets/vue-logo.png"
+              width="200"
+              height="200"
+              alt="Vue.js Logo"
+            />
+            <p>Vue.js</p>
+          </div>
+          <div id="firebase">
+            <img
+              src="../assets/firebase-logo.png"
+              width="200"
+              height="200"
+              alt="Firebase Logo"
+            />
+            <p>Firebase</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -48,6 +64,14 @@ main {
   #project-requirements {
     p {
       font-size: 20px;
+    }
+  }
+
+  #project-technologies {
+    #technology-logos {
+      display: flex;
+      justify-content: center;
+      grid-template-columns: 1fr 1fr;
     }
   }
 }

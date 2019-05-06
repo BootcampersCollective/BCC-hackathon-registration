@@ -2,6 +2,12 @@
   <nav>
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
+    <a
+      id="slack-link"
+      href="http://slack.bootcamperscollective.com/"
+      target="_blank"
+      >BCC on Slack!</a
+    >
   </nav>
 </template>
 
@@ -15,13 +21,17 @@ export default {
 nav {
   display: flex;
   align-content: center;
-}
+  align-items: center;
+  a {
+    text-decoration: none;
+    color: navy;
+    font-size: 24px;
+    padding: 16px;
+    margin: 12px;
+  }
 
-a {
-  text-decoration: none;
-  color: navy;
-  font-size: 24px;
-  padding: 16px;
-  margin: 12px;
+  #slack-link {
+    font-size: 20px;
+  }
 }
 </style>
