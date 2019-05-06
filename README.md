@@ -1,29 +1,21 @@
-# hackathon-registration-system
+# BCC Summer Hackathon Registration System
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-## Project setup
-```
-yarn install
-```
+## Technologies we will be using in this project
+[Vue.js](https://vuejs.org/v2/guide/)
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+[Firebase](https://firebase.google.com/docs/)
 
-### Compiles and minifies for production
 ```
-yarn run build
-```
+# Compiles and hot-reloads for development
+> yarn run serve
 
-### Run your tests
-```
-yarn run test
-```
+# Compiles and minifies for production
+> yarn run build
 
-### Lints and fixes files
-```
-yarn run lint
-```
+# Run your tests
+> yarn run test
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Lints and fixes files
+> yarn run lint
+```
