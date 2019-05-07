@@ -1,5 +1,5 @@
 # Contributing to this project
-1. Fork this repository - [Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
+1. Fork this repository - [Use the feature branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
 2. Clone your fork
 3. Add a remote pointing to the origin repo
 3. Create a new `feature` branch ex. feature-navigation
