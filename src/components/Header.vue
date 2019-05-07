@@ -2,17 +2,21 @@
   <header>
     <logo :width="88" :height="88" />
     <navigation />
+    <github-button />
   </header>
 </template>
 
 <script>
 import Logo from './Logo.vue';
 import Navigation from './Navigation.vue';
+import GitHubButton from './GitHubButton';
+
 export default {
   name: 'Header',
   components: {
     Navigation,
     Logo,
+    'github-button': GitHubButton,
   },
 };
 </script>
@@ -30,7 +34,7 @@ header {
 
 @media (max-width: 500px) {
   header {
-    display: block;
+    width: 100%;
     text-align: center;
   }
 }
