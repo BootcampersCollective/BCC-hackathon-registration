@@ -2,12 +2,15 @@
   <nav>
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
+    <a href="http://slack.bootcamperscollective.com/" target="_blank">
+      <i class="fab fa-slack" />
+    </a>
     <a
-      id="slack-link"
-      href="http://slack.bootcamperscollective.com/"
+      href="https://github.com/BadrChoubai/BCC-hackathon-registration"
       target="_blank"
-      >BCC on Slack!</a
     >
+      <i class="fab fa-github" />
+    </a>
   </nav>
 </template>
 
@@ -24,7 +27,6 @@ nav {
   align-items: center;
   a {
     text-decoration: none;
-    color: navy;
     font-size: 18px;
     padding: 8px;
     margin: 6px;
