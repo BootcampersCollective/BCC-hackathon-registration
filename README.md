@@ -1,5 +1,8 @@
 # BCC Summer Hackathon Registration System
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+<a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ea5e5e.svg?style=flat-square" alt="Prettier"></a>
+<a href="https://www.npmjs.com/package/vue"><img src="https://img.shields.io/badge/License-MIT-ff.svg?style=flat-square" alt="License"></a>
+<a href="http://slack.bootcamperscollective.com"><img src="https://img.shields.io/badge/Chat-Slack-ecb22e.svg?style=flat-square" alt="License"></a>
+
 
 ## Technologies we will be using in this project
 [Vue.js](https://vuejs.org/v2/guide/)
