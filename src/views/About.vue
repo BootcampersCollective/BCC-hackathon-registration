@@ -14,3 +14,9 @@
     </section>
   </main>
 </template>
+
+<script>
+export default {
+  name: 'About',
+};
+</script>

@@ -1,18 +1,21 @@
 import firebase from 'firebase';
 import Vue from 'vue';
-import { firestorePlugin } from 'vuefire';
 import App from './App.vue';
-import firebaseConfig from './config/firebase';
+import firebaseApp from './firebase.init';
 import router from './router';
 import store from './store';
-export const db = firebase.initializeApp(firebaseConfig).firestore();
 
-Vue.use(firestorePlugin);
+firebaseApp.firestore();
 
 Vue.config.productionTip = false;
 
-new Vue({
-  router,
-  store,
-  render: h => h(App),
-}).$mount('#app');
+let app;
+firebase.auth().onAuthStateChanged(() => {
+  if (!app) {
+    app = new Vue({
+      router,
+      store,
+      render: h => h(App),
+    }).$mount('#app');
+  }
+});
