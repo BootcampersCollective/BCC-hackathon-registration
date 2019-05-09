@@ -1,8 +1,12 @@
 <template>
   <header>
-    <logo :width="88" :height="88" />
-    <navigation />
-    <github-button />
+    <div class="left">
+      <logo :width="88" :height="88" />
+      <navigation />
+    </div>
+    <div class="right">
+      <github-button />
+    </div>
   </header>
 </template>
 
@@ -30,12 +34,24 @@ header {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+
+  .left {
+    display: inline-flex;
+  }
 }
 
 @media (max-width: 500px) {
   header {
     width: 100%;
     text-align: center;
+    flex-direction: column;
+    .left {
+      width: 80%;
+      justify-content: space-between;
+    }
+    .right {
+      width: 100%;
+    }
   }
 }
 </style>
