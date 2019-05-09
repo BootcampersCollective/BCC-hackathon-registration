@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 const provider = new firebase.auth.GithubAuthProvider();
 provider.addScope('profile');
 

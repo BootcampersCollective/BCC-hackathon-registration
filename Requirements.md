@@ -9,3 +9,19 @@
 8. send email notifications
 9. have info for day of hackathon about project
 10. see upcoming/all hackathons
+
+# User
++ Have them first sign in with github and create a profile
++ Users can create teams
++ Users can join teams
+
+# Admin Page
++ View all users
+
+# Components
++ Team Creation form
++ Profile setup form
+
+# Pages
++ Team Dashboard
++ User Dashboard
