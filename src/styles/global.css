@@ -33,4 +33,5 @@ fieldset {
 #app-view {
   max-width: 850px;
   margin: auto;
+  height: 100vh;
 }
