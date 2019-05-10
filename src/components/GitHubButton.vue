@@ -1,46 +1,45 @@
 <template>
-  <button id="github-login-button" @click.prevent="loginWithGitHub">
-    Login with GitHub
-  </button>
+  <div>
+    <div v-if="loggedIn">
+      <span>{{ user.displayName }}</span>
+      <button @click="logout">Logout</button>
+    </div>
+    <button v-if="!loggedIn" id="github-login-button" @click.prevent="login">
+      Login with GitHub
+    </button>
+  </div>
 </template>
 
 <script>
-import firebase from 'firebase/app';
-const provider = new firebase.auth.GithubAuthProvider();
-provider.addScope('profile');
-
-provider.setCustomParameters({
-  allow_signup: 'false',
-});
+import { mapGetters, mapMutations } from 'vuex';
 
 export default {
   name: 'GitHubButton',
   methods: {
-    loginWithGitHub() {
-      firebase
-        .auth()
-        .signInWithPopup(provider)
-        .then(function(result) {
-          console.log(result);
-        })
-        .catch(function(error) {
-          throw new Error(`
-            There was an error
-            ${error.messages}
-          `);
-        });
-    },
+    ...mapMutations(['login', 'logout']),
+  },
+  computed: {
+    ...mapGetters(['user', 'loggedIn']),
+  },
+  created() {
+    return this.$store.dispatch('fetchCredentials');
   },
 };
 </script>
 
 <style lang="scss" scoped>
 button {
+  cursor: pointer;
   border: none;
   padding: 12px;
 }
 
 #github-login-button {
+  background: #333;
+  color: #fff;
+  border-bottom: 2px solid #a033a0;
+}
+#github-logout-button {
   background: #333;
   color: #fff;
   border-bottom: 2px solid #a033a0;
