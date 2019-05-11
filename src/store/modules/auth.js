@@ -17,13 +17,7 @@ export const mutations = {
   login() {
     const provider = new firebase.auth.GithubAuthProvider();
     provider.addScope('profile');
-    firebase
-      .auth()
-      .signInWithPopup(provider)
-      .then(({ user: { uid }, additionalUserInfo: { profile, username } }) =>
-        console.log(uid, profile, username),
-      )
-      .catch(error => console.log(error));
+    firebase.auth().signInWithPopup(provider);
   },
   logout() {
     firebase.auth().signOut();
