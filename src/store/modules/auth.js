@@ -29,10 +29,8 @@ export const actions = {
     console.log(`fetchCredentials()`);
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-        console.log(user);
         const { uid, displayName } = user;
         const cleanedUser = { displayName, uid };
-        console.log(cleanedUser);
         commit('setUser', cleanedUser);
       } else {
         commit('setUser', {});
