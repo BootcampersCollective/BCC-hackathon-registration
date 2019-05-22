@@ -1,4 +1,4 @@
-import { About, Home } from '@/views';
+import { About, Home, Profile } from '@/views';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import Vue from 'vue';
@@ -21,6 +21,14 @@ let router = new Router({
       path: '/about',
       name: 'about',
       component: About,
+      meta: {
+        requiresGuest: false,
+      },
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: Profile,
       meta: {
         requiresGuest: false,
       },

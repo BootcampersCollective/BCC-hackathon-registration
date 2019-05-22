@@ -1,7 +1,7 @@
 <template>
   <img
     id="logo"
-    src="../assets/BCC_unfilled.png"
+    src="../../assets/BCC_unfilled.png"
     alt="Bootcamper's Collective Logo"
     :width="this.width"
     :height="this.height"

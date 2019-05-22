@@ -10,8 +10,8 @@
 
 <script>
 import '@/styles/global.css';
-import Header from '@/components/Header.vue';
-import Footer from '@/components/Footer.vue';
+import Header from '@/components/Display/Header.vue';
+import Footer from '@/components/Display/Footer.vue';
 export default {
   components: {
     Header,

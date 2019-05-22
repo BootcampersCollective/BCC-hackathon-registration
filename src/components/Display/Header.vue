@@ -12,8 +12,8 @@
 
 <script>
 import Logo from './Logo.vue';
-import Navigation from './Navigation.vue';
-import GitHubButton from './GitHubButton';
+import Navigation from '@/components/Display/Navigation';
+import GitHubButton from '@/components/Auth/GitHubButton';
 
 export default {
   name: 'Header',
