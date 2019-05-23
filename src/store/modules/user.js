@@ -33,27 +33,26 @@ export const mutations = {
 export const actions = {
   fetchCredentials({ commit }) {
     console.log(`fetchCredentials()`);
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(async function(user) {
       if (user) {
         const { uid, displayName, email, photoURL } = user;
         const cleanedUser = { uid, displayName, email, photoURL };
-        commit('setUser', cleanedUser);
-
-        var userProfileReference = db.collection('profiles').doc(uid);
-        var userProfile = userProfileReference
+        var userProfileReference = await db.collection('profiles').doc(uid);
+        var userProfile = await userProfileReference
           .get()
           .then(doc => {
             if (!doc.exists) {
               console.log('No such document!');
             } else {
-              console.log('Document data:', doc.data());
+              return doc.data();
             }
           })
           .catch(err => {
             console.log('Error getting document', err);
           });
 
-        console.log(userProfile);
+        commit('setUser', cleanedUser);
+        commit('setProfile', userProfile);
       } else {
         commit('setUser', {});
         commit('setProfile', {});
