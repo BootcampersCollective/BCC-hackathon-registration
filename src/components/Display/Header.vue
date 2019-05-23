@@ -34,7 +34,6 @@ header {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-
   .left {
     display: inline-flex;
   }

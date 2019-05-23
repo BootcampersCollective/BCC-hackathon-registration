@@ -4,18 +4,25 @@
     <fieldset class="profile-form__inputs">
       <label for="bio">
         About Yourself:
-        <textarea v-model="bio" type="text" />
+        <textarea v-model="userProfileInfo.bio" type="text" />
       </label>
       <label for="website">
         Your Website:
-        <input v-model="website" type="text" />
+        <input v-model="userProfileInfo.website" type="text" />
       </label>
       <label for="skills">
         Skills:
         <small>(seperated by commas)</small>
-        <input v-model="skills" type="text" />
+        <input v-model="userProfileInfo.skills" type="text" />
       </label>
-      <button @click.prevent="createUserProfile(auth.user.uid)">
+      <button
+        @click.prevent="
+          createUserProfile({
+            uid: auth.user.uid,
+            profileInfo: userProfileInfo,
+          })
+        "
+      >
         Create Profile
       </button>
     </fieldset>
@@ -23,35 +30,21 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
-import { db } from '@/firebase.init';
+import { mapState, mapMutations } from 'vuex';
+
 export default {
   name: 'ProfileForm',
   data() {
     return {
-      bio: '',
-      website: '',
-      skills: '',
+      userProfileInfo: {
+        bio: '',
+        website: '',
+        skills: '',
+      },
     };
   },
   methods: {
-    createUserProfile(uid) {
-      const data = {
-        bio: this.bio,
-        website: this.website,
-        skills: this.skills.split(','),
-      };
-      // Add a new document in collection "profiles"
-      db.collection('profiles')
-        .doc(uid)
-        .set(data)
-        .then(function() {
-          console.log('Document successfully written!');
-        })
-        .catch(function(error) {
-          console.error('Error writing document: ', error);
-        });
-    },
+    ...mapMutations(['createUserProfile']),
   },
   computed: {
     ...mapState(['auth']),
