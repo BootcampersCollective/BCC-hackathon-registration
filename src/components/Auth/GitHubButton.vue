@@ -4,7 +4,11 @@
       <span>{{ user.displayName }}</span>
       <button @click="logout">Logout</button>
     </div>
-    <button v-if="!loggedIn" id="github-login-button" @click.prevent="login">
+    <button
+      v-if="!loggedIn"
+      id="github-login-button"
+      @click.prevent="loginWithGithub"
+    >
       Login with GitHub
     </button>
   </div>
@@ -16,7 +20,7 @@ import { mapGetters, mapMutations } from 'vuex';
 export default {
   name: 'GitHubButton',
   methods: {
-    ...mapMutations(['login', 'logout']),
+    ...mapMutations(['loginWithGithub', 'logout']),
   },
   computed: {
     ...mapGetters(['user', 'loggedIn']),
