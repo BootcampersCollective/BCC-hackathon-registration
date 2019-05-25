@@ -1,17 +1,17 @@
 <template>
-  <div>
-    <profile-form />
-  </div>
+    <div>
+        <profile-display />
+    </div>
 </template>
 
 <script>
-import ProfileForm from '@/components/Profile/ProfileForm.vue';
+import ProfileDisplay from '@/components/Profile/ProfileDisplay.vue';
 
 export default {
-  name: 'Profile',
-  components: {
-    ProfileForm,
-  },
+    name: 'Profile',
+    components: {
+        ProfileDisplay,
+    },
 };
 </script>
 
