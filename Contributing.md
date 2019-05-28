@@ -8,6 +8,9 @@
 6. Rebase your changes onto the latest w/ `git pull --rebase`
 7. Post a PR comparing `origin/master` to the `fork/category`
 
+### How to write your commit message?
+Go ahead and read about [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/)
+
 ### ***Please***
 + Adhere to current project styling the project is setup to use ES Lint + Prettier and has it's own .prettierrc. It is also setup with pre commit linting.
 
