@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 button {
     cursor: pointer;
     border: none;
