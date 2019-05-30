@@ -1,4 +1,4 @@
-import { About, Home, Profile } from '@/views';
+import { About, Event, Home, Profile } from '@/views';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import Vue from 'vue';
@@ -29,6 +29,14 @@ let router = new Router({
             path: '/profile',
             name: 'profile',
             component: Profile,
+            meta: {
+                requiresGuest: false,
+            },
+        },
+        {
+            path: '/event',
+            name: 'event',
+            component: Event,
             meta: {
                 requiresGuest: false,
             },
