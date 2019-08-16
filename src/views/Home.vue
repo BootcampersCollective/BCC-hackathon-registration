@@ -1,10 +1,10 @@
 <template>
     <main>
-        <section id="call-to-action">
+        <section class="call-to-action">
             <h2>Bootcamper's Collective Summer Hackathon Preparation</h2>
         </section>
 
-        <section id="project-requirements">
+        <section class="project-requirements">
             <p>
                 The next BCC Hackathon is coming soon and we are looking to
                 build out an improved hackathon registration system
@@ -23,10 +23,10 @@
                 </ul>
             </div>
         </section>
-        <section id="project-technologies">
+        <section class="project-technologies">
             <div>
                 <h1>What technologies are we using for the project?</h1>
-                <div id="technology-logos">
+                <div class="technology-logos">
                     <div id="vue">
                         <img
                             src="../assets/vue-logo.png"
@@ -61,20 +61,20 @@ export default {
 main {
     text-align: center;
 
-    #call-to-action {
+    .call-to-action {
         width: auto;
         font-size: 20px;
         font-weight: bold;
     }
 
-    #project-requirements {
+    .project-requirements {
         p {
             font-size: 20px;
         }
     }
 
-    #project-technologies {
-        #technology-logos {
+    .project-technologies {
+        .technology-logos {
             display: flex;
             justify-content: center;
             grid-template-columns: 1fr 1fr;
